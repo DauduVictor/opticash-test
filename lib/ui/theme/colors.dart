@@ -28,4 +28,6 @@ class AppColors {
   static const greenColor2 = Color(0xFF627122);
   static const redColor = Color(0xFFD82C0D);
   static const yellowColor = Color(0xFFCA8215);
+  static const deepGreenColor = Color(0xFF134B23);
+  static const brownColor = Color(0xFF131005);
 }

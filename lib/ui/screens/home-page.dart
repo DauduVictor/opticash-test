@@ -160,6 +160,25 @@ class HomePage extends HookWidget {
             ],
           ),
           SizedBox(height: mqr.height * 0.11),
+          const IntrinsicHeight(
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  AdvertContainer(
+                    text: 'Refer a friend and earn \$3 per referral',
+                    image: payImage,
+                    color: AppColors.deepGreenColor,
+                  ),
+                  AdvertContainer(
+                    text: 'Pay your bills from the comfort of your home',
+                    image: payImage,
+                    color: AppColors.brownColor,
+                  ),
+                ],
+              ),
+            ),
+          ),
           const SizedBox(height: 34),
           // transaction
           Text(
@@ -252,6 +271,66 @@ class HomePage extends HookWidget {
                   ),
                 ),
               ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class AdvertContainer extends StatelessWidget {
+  const AdvertContainer({
+    super.key,
+    required this.text,
+    required this.image,
+    required this.color,
+  });
+
+  final String text;
+  final String image;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    final mqr = MediaQuery.of(context).size;
+    final textTheme = Theme.of(context).textTheme;
+    return Container(
+      width: mqr.width * 0.67,
+      margin: const EdgeInsets.only(right: 10),
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(6),
+        image: const DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage(
+            maskImage,
+          ),
+        ),
+      ),
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 8.0, top: 20),
+            child: Image.asset(
+              image,
+              width: mqr.width * 0.3,
+              // height: 40,
+              fit: BoxFit.cover,
+            ),
+          ),
+          const SizedBox(width: 15),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(right: 12.0),
+              child: Text(
+                text,
+                style: textTheme.bodyLarge!.copyWith(
+                  fontSize: 15,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ),
           ),
         ],

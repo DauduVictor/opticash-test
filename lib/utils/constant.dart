@@ -18,5 +18,8 @@ const avatarImage = 'assets/images/jpegs/avatar-image.png';
 const nigeriaImage = 'assets/images/jpegs/nigeria.png';
 const threeDCoinImage = 'assets/images/jpegs/3d-coin-image.png';
 const homemainConDesImage = 'assets/images/jpegs/home-main-conDes.png';
+const maskImage = 'assets/images/jpegs/mask.png';
+const referImage = 'assets/images/jpegs/refer.png';
+const payImage = 'assets/images/jpegs/pay.png';
 
 const baseUrl = 'https://devapi.opticash.io/api/v1';
