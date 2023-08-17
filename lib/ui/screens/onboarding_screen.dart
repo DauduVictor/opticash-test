@@ -56,7 +56,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
   // list to hold main text for animation display
   final subText = [
     'Opticash provides you the fastest remittance to send and receive money!',
-    'Opticash allows users to send fast payments worldwide using blockchain technology',
+    'Opticash allows users to send fast payments worldwide using blockchain',
     'Opticash is the best place to trade your crypto',
   ];
 
@@ -137,13 +137,13 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                         ),
                       ],
                     ),
-                    SizedBox(height: mqr.height * 0.039),
+                    SizedBox(height: mqr.height * 0.035),
                     GradientButton(
                       label: 'Create New Account',
                       onTap: () =>
                           Navigator.pushNamed(context, CreateAccount.id),
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 18),
                     GestureDetector(
                       onTap: () => Navigator.pushNamed(context, SignIn.id),
                       child: Text(
